@@ -1,0 +1,56 @@
+{
+  "name": "discord-lite",
+  "version": "1.0.0",
+  "description": "**AVISO IMPORTANTE**  \r Este projeto é um experimento pessoal / educacional. **NÃO** é um cliente oficial do Discord. Uso pessoal apenas — **não distribua builds**, não ofereça downloads, não monetize.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tago-dev/discord-lite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tago-dev/discord-lite/issues"
+  },
+  "homepage": "https://github.com/tago-dev/discord-lite#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "electron": "^38.2.2",
+    "electron-builder": "^25.1.6"
+  },
+  "build": {
+    "appId": "com.tago.discordlite",
+    "productName": "Discord Lite",
+    "files": [
+      "main.js",
+      "package.json",
+      "public/**/*"
+    ],
+    "directories": {
+      "buildResources": "public"
+    },
+    "asar": true,
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "public/ico_win.ico"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Network",
+      "icon": "public/ico_linux.png"
+    }
+  }
+  
+}
